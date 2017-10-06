@@ -739,14 +739,14 @@
                 event.keyCode === 40  ) {
                 switch ( event.keyCode ) {
                     case 33: // Page up
-                  //  case 37: // Left
+                    //  case 37: // Left
                     case 38: // Up
                              api.prev();
                              break;
                     case 9:  // Tab
-                 //   case 32: // Space
+                    //   case 32: // Space
                     case 34: // Page down
-                  //  case 39: // Right
+                    //  case 39: // Right
                     case 40: // Down
                              api.next();
                              break;
