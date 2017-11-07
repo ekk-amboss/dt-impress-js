@@ -726,35 +726,6 @@
         //   positioning. I didn't want to just prevent this default action, so I used [tab]
         //   as another way to moving to next step... And yes, I know that for the sake of
         //   consistency I should add [shift+tab] as opposite action...
-        document.addEventListener( "keyup", function( event ) {
-
-            if ( event.shiftKey || event.altKey || event.ctrlKey || event.metaKey ) {
-                return;
-            }
-
-            if ( event.keyCode === 9 ||
-                event.keyCode === 33 ||
-                event.keyCode === 34 ||
-                event.keyCode === 38 ||
-                event.keyCode === 40  ) {
-                switch ( event.keyCode ) {
-                    case 33: // Page up
-                    //  case 37: // Left
-                    case 38: // Up
-                             api.prev();
-                             break;
-                    case 9:  // Tab
-                    //   case 32: // Space
-                    case 34: // Page down
-                    //  case 39: // Right
-                    case 40: // Down
-                             api.next();
-                             break;
-                }
-
-                event.preventDefault();
-            }
-        }, false );
 
         // Delegated handler for clicking on the links to presentation steps
         document.addEventListener( "click", function( event ) {
